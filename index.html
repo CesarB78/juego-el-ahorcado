@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name = "language" content="spanish">
+    <meta name ="author" content="Cesar Augusto Botina">
+    <meta name ="description" content="Clasico juego para adivinar frases">
+    <meta name="keywords" content="juego clasico, adivinar palabras, juego el ahorcado">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ahorcado-Juego</title>
+    
+  </head>
+  <body>
+    
+    <div class="main">
+      <div class="side_front">
+        <div class="imagenes_ahorcado" id="imagenes">
+
+          <img
+           class="base" 
+           id="base"
+           src="./img/Base01.png" 
+           alt="" />
+          
+        </div>
+        <div class="palabrasIncorrectas">
+          
+          <p>Letras Incorrectas: </p>
+          <p id="wrongWords"></p>
+          
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="score">
+          <div class="scoreUser">
+            <h2>SCORE : <span id="score">0</span></h2>
+          </div>
+          <div class="exitGame">
+            <button id="btn_exit_game" class="btn_exit_game">Presiona AQUI si quieres Salir del Juego</button>
+          </div>
+
+        </div>
+        
+        <div class="title_img">
+          <img src="./img/Logo1.png" alt="" />
+          <h1>Ahorcado</h1>
+          
+        </div>
+        
+
+        <div class="inputUser">
+          <h3>Escribe tu Nombre y presiona Enviar para iniciar el Juego</h3>
+          <p class="texChallenge">El Challenge es ganar 10 ahorcados de seguido </p>
+          <input
+            class="text_user"
+            id="input_text_user"
+            type="text"
+            placeholder="escribe tu nombre AQUI"
+            autofocus
+            maxlength="8"
+          />
+
+          <input class="btn" id="btn_enviar" type="button" value="enviar"  />
+          
+        </div>
+
+        <div class="elementos">
+          <div class="elements_inser">
+            
+          </div>
+          <form action="" id="gameForm">
+            <div class="list-chec">
+              <select name="true" id="list-game" class="list-game" disabled>
+                <option value="">Seleccione</option>
+                <option value="">Peliculas / Series</option>                
+              </select>
+            </div>
+
+            <div class="btn-insert-list">
+              <input class="btn_disabled" id="list" type="button" value="Insertar" disabled />
+            </div>
+            
+              <p class="textCheck" id="textCheck"></p>  
+            
+
+            <div class="find-text">
+              <input type="text" id="texto" class="texto" maxlength="1" disabled />
+            </div>
+
+            <div class="btn-find-text">
+              <button
+                class="btn_disabled_genera"
+                id="buscarletra"
+                disabled
+              >
+                Buscar Letra
+              </button>
+            </div>
+            <div class="count-Word">
+              <p>Cantidad de palabras : <span id="numberWords">0</span></p>
+              
+            </div>
+            <div class="error">
+              <p class="error_" id="errorWords"></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="palabra">
+          <!--aqui va la palabra para para iniciar el juego-->
+        </div>
+        
+        <div class="backGame">
+          <button class="btnGame" id="playAgain">Jugar Nuevamente</button>
+          <button class="btnGame" id="giveUp">Rendirse</button>
+        </div>
+
+        
+        
+          <footer class="footer">
+            Coded by
+            <a href="https://github.com/CesarB78" target="_blank"><strong>Cesar Augusto Botina</strong></a>
+        
+        </div>
+        
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+  
+
+    <script src="script.js"></script>
+    <script src="list-game.js"></script>
+  </body>
+</html>

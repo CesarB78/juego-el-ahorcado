@@ -1,0 +1,778 @@
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+   background-image: url(./img/tp-pattern1.png); 
+    background-position: center center;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; */
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.palabrasIncorrectas{
+  
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+  font-size: 1.0625rem;
+  font-weight: bold;
+}
+
+/* estylos para la base del ahorcado */
+
+.side_front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.showNameUser{
+  margin-top: 20px;
+}
+.nameUser{
+    margin: 0;
+}
+.main {
+  display: flex;
+  width: 100%;
+  
+  
+  
+}
+.base {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  top: -241px;
+}
+.lazo {
+  height: 60px;
+  width: 53px;
+  position: absolute;
+  left: 123px;
+  top: 48px;
+}
+.head {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 132px;
+  top: 83px;
+}
+.body {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 118px;
+  top: 112px;
+}
+.right_arm {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 85px;
+  top: 100px;
+}
+.left_arm {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  transform: rotateY(180deg);
+  left: 171px;
+  top: 100px;
+}
+.right_leg {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 112px;
+  top: 170px;
+}
+.left_leg {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  transform: rotateY(180deg);
+  left: 145px;
+  top: 170px;
+}
+
+/* esconder las imagenes del ahorcado */
+.lazo,
+.head,
+.body,
+.right_arm,
+.left_arm,
+.right_leg,
+.left_leg,
+.exclama {
+  display: none;
+}
+
+/* terminan los estilos para la base del ahorcado */
+
+/* .scoreUser{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+
+  
+} */
+.score{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+.scoreUser h2{
+  color: red;
+}
+.scoreUser  span{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffff;
+}
+.btn_exit_game{
+  background: none;
+  border: 0;
+  font-size: 0.9375rem;
+  color: red;
+  width: 100%;
+  height: 20px;
+  line-height: 0;
+  
+}
+.title_img > img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.title_img {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  
+  
+}
+.text_user{
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    
+    
+}
+.text_user:focus{
+  outline: none;
+}
+.textCheck{
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: rgb(138 39 59);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    
+}
+.btn:hover{
+  background-color:rgb(147, 53, 72);
+}
+
+
+
+.btn-genera{
+  width: 130px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: rgb(138 39 59);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+  
+}
+.btn-genera:hover{
+  background-color:rgb(147, 53, 72);
+}
+
+
+.btn_disabled_genera{
+  width: 130px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: rgb(131 89 97);
+    color: #a19d9d;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.btn_enviar{
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  background-color: rgb(131 89 97);
+  color: #a19d9d;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0,6,18,1) 0%, rgba(6,60,103,1) 100%, rgba(226,218,218,1) 100%);
+
+  width: 1000px;
+
+  min-height: 97vh;
+  border-radius: 20px 20px 20px 20px;
+  
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.showTextGameOver{
+  font-size: 35px;
+  font-weight: bold;
+  animation: showTextGameOver 3s linear;
+  
+}
+
+@keyframes showTextGameOver{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.showTextWinGame{
+  font-size: 35px;
+  font-weight: bold;
+  animation: showTextWinGame 3s linear;
+  margin-top: 10px;
+}
+.showTextWinGame p{
+  color: rgb(161, 159, 159);
+}
+.showTextGameOver p{
+  color: rgb(161, 159, 159);
+
+}
+
+.showTextWinGameChallenge p{
+  color: rgb(161, 159, 159);
+  font-size: 35px;
+  font-weight: bold;
+  animation: showTextWinGame 3s linear;
+}
+
+@keyframes showTextWinGame{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.classLetter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.palabra{
+  margin-top: -35px;
+}
+.palabra p {
+  color: #fff;
+  font-size: 41px;
+  width: 35px;
+  height: 46px;
+  border-bottom: 1px solid #fff;
+  margin-left: 20px;
+  
+  text-align: center;
+  color: black;
+}
+.juegoPalabras {
+  display: flex;
+}
+
+input > oracion {
+  color: white;
+}
+.title_img h1 {
+  color: white;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 14px;
+  font-size: 60px;
+  margin: 0;
+  
+}
+.inputUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.texChallenge{
+  font-size: 15px;
+  margin-top: 10px;
+  color: white;
+}
+.inputUser h3{
+  color: #ffff;
+}
+.label_user{
+    font-weight: bold;
+    font-size: 18px;
+
+    
+}
+.text_user{
+    margin-top: 10px;
+}
+.elementos {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 247px;
+  margin-top: 30px;
+}
+.list-game{
+  width: 160px;
+  font-size: 17px;
+}
+.texto{
+  width: 107px;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+
+}
+.find-text input:focus{
+  outline: none;
+  border-bottom: 2px solid rgb(138 39 59);
+  
+  
+}
+.btn-insert-list,
+.btn-find-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.generar{
+  width: 130px;
+}
+
+.list-chec,
+.insert_list,
+.generar,
+.find-text,
+.generar {
+  display: flex;
+  justify-content: center;
+  
+}
+.insert_list,
+.generar {
+  
+  padding-top: 5px;
+}
+
+.btn_disabled{
+  width: 100px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: rgb(131 89 97);
+    color: #a19d9d;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.count-Word{
+  display: none;
+  margin-top: 5px;
+}
+.count-Word p {
+  font-size: 16px;
+  margin-top: 4px;
+  text-align: center;
+  color: #fff;
+}
+.error {
+  display: none;
+  justify-content: center;
+  margin: 0 auto;
+  width: 108px;
+  height: 26px;
+  border-radius: 10px;
+  margin-top: 10px;
+  
+}
+.error_{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.classLetter p {
+  border-bottom: 1px solid #fff;
+  color: #ffff;
+  
+}
+
+.divUsuario{
+  font-size: 30px;
+  display: flex;
+  
+  
+  
+}
+.usuario{
+  opacity: 1;
+  font-size: 25px;
+}
+
+.nameUsuario{
+  opacity: 0;
+  
+}
+.divUsuario p{
+  font-size: 25px;
+}
+
+  
+.backGame{
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius:30px ;
+  
+}
+.btnGame{
+  
+  width: 160px;
+  height: 50px;
+  border-radius: 30px;
+  outline: none;
+  background-color: rgb(138 39 59);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s all;
+  border: none;
+  font-weight: bold;
+  
+
+}
+.btnGame:hover{
+  background-color:rgb(147, 53, 72);  
+
+}
+
+#wrongWords{
+  width: 156px;
+  height: 22px;
+  
+}
+footer{
+  position: absolute;
+  bottom: 15px;
+  color: white;
+
+}
+footer a{
+  color: rgb(147, 53, 72);
+}
+
+
+
+/*-----------------medias query -----------------*/
+
+@media (max-width: 375px){
+  .main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -13px;
+  }
+  .btn_exit_game{
+    
+    font-size: 0.625rem;
+    color: red;
+    border-radius: 0.625rem;
+    padding: 2px;
+    
+  }
+  
+ 
+  .container{
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .imagenes_ahorcado{
+    
+    display: flex;
+    justify-content: center;
+  }
+
+  .base{
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 93px;
+    top: 510px;
+    
+
+  }
+
+  .scoreUser h2{
+    font-size: 10px;
+  }
+
+  .scoreUser span{
+    font-size: 10px;
+  }
+
+  
+
+  .title_img h1{
+    font-size: 35px;
+  }
+
+  .title_img img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .inputUser h3{
+    font-size: 11px;
+  }
+
+  .inputUser p{
+    font-size: 11px;
+  }
+
+  .text_user{
+    width: 170px;
+    height: 28px;
+    font-size: 14px;
+}
+.btn{
+  width: 80px;
+  height: 25px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.btn_enviar{
+  width: 80px;
+  height: 25px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.elementos{
+  margin-top: 20px;
+
+}
+.list-game{
+  width: 140px;
+  font-size: 14px;
+}
+.btn_disabled{
+  width: 80px;
+  height: 25px;
+  font-size: 15px;
+}
+.texto{
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+}
+.btn_disable_genera{
+  width: 28px;
+  height: 28px;
+  font-size: 15px;
+
+}
+
+.btn_disabled_genera{
+  width: 100px;
+  height: 25px;
+  font-size: 15px;
+}
+.btn-genera{
+  width: 100px;
+  height: 25px;
+  font-size: 15px;
+}
+.count-Word p{
+  font-size: 13px;
+}
+.error_{
+  font-size: 15px;
+  margin-top: -20px;
+}
+.palabra{
+  margin-top: -55px;
+  margin-right: 15px;
+}
+.palabra p{
+  width: 10px;
+  height: 22px;
+  margin-bottom: 6px;
+  margin-top: 5px;
+  
+}
+
+.palabrasIncorrectas{
+  
+  display: flex;
+  flex-direction: row;
+  position:absolute;
+  z-index: 1;
+  font-size: 0.6875rem;
+  font-weight: 100;
+  color:white;
+  bottom: 6px;
+  left: 19px;
+}
+
+#wrongWords{
+  margin-left: 5px;
+}
+
+.backGame{
+  margin-top: -25px;
+}
+.btnGame{
+  width: 110px;
+  height: 26px;
+  font-size: 0.5625rem;
+}
+
+.showTextWinGame,
+.showTextGameOver{
+  font-size: 1.125rem;
+}
+
+/* Partes del cuerpo----------------------------- */
+
+.lazo {
+  height: 36px;
+  width: 33px;
+  position: absolute;
+  left: 195px;
+  top: 515px;
+  z-index: 1;
+}
+.head {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: 201px;
+  top: 538px;
+  z-index: 1;
+}
+.body {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 199px;
+  top: 560px;
+  z-index: 1;
+}
+.right_arm {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 185px;
+  top: 557px;
+  z-index: 1;
+}
+.left_arm {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  transform: rotateY(180deg);
+  left: 222px;
+  top: 557px;
+  z-index: 1;
+}
+.right_leg {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 196px;
+  top: 586px;
+  z-index: 1;
+}
+.left_leg {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  transform: rotateY(180deg);
+  left: 211px;
+  top: 586px;
+  z-index: 1;
+}
+footer{
+  right: 22px;
+  font-size: 0.625rem;
+}
+
+
+}
+
+
