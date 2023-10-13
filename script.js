@@ -19,7 +19,9 @@ const starGame = btnNameUser.addEventListener("click", () => {
 
   if(inputTextUser.value === ""){
     alert("El Campo nombre no puede estar vacio")
+    location.reload();
     inputTextUser.focus()
+    
     
 
   }else{
