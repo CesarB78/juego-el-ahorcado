@@ -82,8 +82,9 @@ buscarLetra.addEventListener("click", (e) => {
       var anchoVentana = window.innerWidth;
     if (p[i].innerText === BoxChar) {
       
-      if(anchoVentana<=375){
-        p[i].style.fontSize = "1rem";  
+      if(anchoVentana<=1000){
+        p[i].style.fontSize = "1.2rem";  
+        
       }else{
         p[i].style.fontSize = "2.5rem";
       }

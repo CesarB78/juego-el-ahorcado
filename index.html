@@ -65,7 +65,7 @@
             placeholder="escribe tu nombre AQUI"
             autofocus
             maxlength="8"
-          />
+            onkeyup="this.value = this.value.toLowerCase();"/>
 
           <input class="btn" id="btn_enviar" type="button" value="enviar"  />
           
@@ -91,7 +91,7 @@
             
 
             <div class="find-text">
-              <input type="text" id="texto" class="texto" maxlength="1" disabled />
+              <input type="text" id="texto" class="texto" maxlength="1" disabled onkeyup="this.value = this.value.toLowerCase();"/>
             </div>
 
             <div class="btn-find-text">
