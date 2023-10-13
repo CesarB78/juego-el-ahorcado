@@ -576,6 +576,12 @@ footer a{
 
 /*-----------------medias query -----------------*/
 
+@media(max-width:570px){
+  .palabra p{
+    width: 15px !important;
+  }
+}
+
 
 @media(max-width : 475px){
   
@@ -590,6 +596,9 @@ footer a{
   }
   .imagenes_ahorcado{
     margin-top: 13px !important;
+  }
+  .palabra p{
+    width: 17px;
   }
 }
 
@@ -821,5 +830,8 @@ footer a{
   }
   .showTextWinGame p{
     font-size: 15px;
+  }
+  .palabra p{
+    width: 12px !important;
   }
 }
